@@ -11,7 +11,7 @@ Spring Batch é um framework leve para processar grandes volumes de dados em lot
 - Relatórios agendados
 - Migrações
 
-## 🛠️ Tecnologias
+## Stacks
 
 - **Java 17**
 - **Spring Boot 4.0.4**
@@ -19,7 +19,7 @@ Spring Batch é um framework leve para processar grandes volumes de dados em lot
 - **H2 Database** - Armazenamento
 - **Maven**
 
-## 🎯 Caso de Uso: Sistema de Revendedora de Carros
+## Caso de Uso: Sistema de Revendedora de Carros
 
 O projeto implementa um cenário real: processar dados de vendas de uma revendedora de carros, aplicar regras de negócio e salvar os resultados.
 
@@ -28,7 +28,7 @@ O projeto implementa um cenário real: processar dados de vendas de uma revended
 CSV/DB Input → Spring Batch Job → Processamento → Database Output
 ```
 
-## 🚀 Como Executar
+## Como Executar
 
 ### Pré-requisitos
 - Java 17+
@@ -49,7 +49,7 @@ mvn spring-boot:run
 curl http://localhost:8080/api/batch/execute
 ```
 
-## 🔄 Componentes do Batch
+## Componentes do Batch
 
 ### 1. **Reader** (Leitor)
 Lê dados de uma fonte (arquivo, banco, API):
@@ -94,7 +94,7 @@ public RepositoryItemWriter<CarDealerData> writer() {
 }
 ```
 
-## 📊 Estrutura do Job
+## Estrutura do Job
 
 ```java
 @Bean
@@ -120,7 +120,7 @@ public Step step(JobRepository jobRepository,
 }
 ```
 
-## 🗄️ Banco de Dados
+## Banco de Dados
 
 Spring Batch usa tabelas próprias para rastrear jobs:
 - `BATCH_JOB_INSTANCE` - Instâncias de jobs
@@ -133,7 +133,7 @@ SELECT * FROM BATCH_JOB_EXECUTION;
 SELECT * FROM BATCH_STEP_EXECUTION;
 ```
 
-## 📈 Monitoramento
+## Monitoramento
 
 Acesse o console H2 para visualizar execuções:
 ```
@@ -141,7 +141,7 @@ http://localhost:8080/h2-console
 JDBC URL: jdbc:h2:mem:testdb
 ```
 
-## 💡 Casos de Uso Práticos
+## Casos de Uso Práticos
 
 1. **Importação de Dados**
    - Ler CSV, validar, salvar no BD
@@ -158,7 +158,7 @@ JDBC URL: jdbc:h2:mem:testdb
 5. **Geração de Relatórios**
    - Processar dados e exportar em formato específico
 
-## 🧪 Configurações por Ambiente
+## Configurações por Ambiente
 
 ### Desenvolvimento
 ```properties
@@ -172,7 +172,7 @@ spring.batch.job.enabled=false
 # Controlar jobs via scheduler/API
 ```
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 **Job não executa?**
 ```bash
@@ -186,7 +186,7 @@ spring.batch.job.enabled=false
 # Verifique delimitadores (CSV, TSV, etc)
 ```
 
-## 📚 Conceitos Chave
+## Conceitos Chave
 
 | Conceito | Descrição |
 |----------|----------|
