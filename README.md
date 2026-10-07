@@ -51,7 +51,7 @@ curl http://localhost:8080/api/batch/execute
 
 ## Componentes do Batch
 
-### 1. **Reader** (Leitor)
+### 1. **Reader**
 Lê dados de uma fonte (arquivo, banco, API):
 ```java
 @Bean
@@ -66,7 +66,7 @@ public FlatFileItemReader<CarDealerData> reader() {
 }
 ```
 
-### 2. **Processor** (Processador)
+### 2. **Processor**
 Aplica lógica de negócio aos dados:
 ```java
 @Component
@@ -82,7 +82,7 @@ public class CarPriceProcessor implements ItemProcessor<CarDealerData, CarDealer
 }
 ```
 
-### 3. **Writer** (Escritor)
+### 3. **Writer**
 Salva dados processados no destino:
 ```java
 @Bean
